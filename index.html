@@ -1,132 +1,104 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <meta charset="UTF-8">
-        <title>JavaScript Yahtzee</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <main>
-            <section id="dobbelstenen">
-                <button type="button">Gooien!</button>
-                <table id="dobbelstenen-tabel" aria-label="Dobbelstenen">
-                    <tr>
-                        <td id="die-1" class="die">-</td>
-                        <td id="die-2" class="die">-</td>
-                        <td id="die-3" class="die">-</td>
-                        <td id="die-4" class="die">-</td>
-                        <td id="die-5" class="die">-</td>
-                    </tr>
-                </table>
-            </section>
-            <section id="scoreblok">
-                <h2>Scoreblok</h2>
-                <table aria-label="Yahtzee scoreblok">
-                    <thead>
-                        <tr>
-                            <th scope="col">Categorie</th>
-                            <th scope="col">Beschrijving</th>
-                            <th scope="col">Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="section-row">
-                            <th colspan="3" scope="colgroup">Bovenste gedeelte</th>
-                        </tr>
-                        <tr>
-                            <td>Enen</td>
-                            <td>Som van alle enen</td>
-                            <td class="score" data-score="enen">-</td>
-                        </tr>
-                        <tr>
-                            <td>Tweeën</td>
-                            <td>Som van alle tweeën</td>
-                            <td class="score" data-score="tweeën">-</td>
-                        </tr>
-                        <tr>
-                            <td>Drieën</td>
-                            <td>Som van alle drieën</td>
-                            <td class="score" data-score="drieën">-</td>
-                        </tr>
-                        <tr>
-                            <td>Vieren</td>
-                            <td>Som van alle vieren</td>
-                            <td class="score" data-score="vieren">-</td>
-                        </tr>
-                        <tr>
-                            <td>Vijven</td>
-                            <td>Som van alle vijven</td>
-                            <td class="score" data-score="vijven">-</td>
-                        </tr>
-                        <tr>
-                            <td>Zessen</td>
-                            <td>Som van alle zessen</td>
-                            <td class="score" data-score="zessen">-</td>
-                        </tr>
-                        <tr class="summary-row">
-                            <td>Totaal boven</td>
-                            <td></td>
-                            <td class="score" data-score="totaal-boven">-</td>
-                        </tr>
-                        <tr class="summary-row">
-                            <td>Bonus (63+)</td>
-                            <td>+35 punten</td>
-                            <td class="score" data-score="bonus">-</td>
-                        </tr>
-                        <tr class="section-row">
-                            <th colspan="3" scope="colgroup">Onderste gedeelte</th>
-                        </tr>
-                        <tr>
-                            <td>Drie dezelfde</td>
-                            <td>Som van alle dobbelstenen</td>
-                            <td class="score" data-score="drie-dezelfde">-</td>
-                        </tr>
-                        <tr>
-                            <td>Vier dezelfde</td>
-                            <td>Som van alle dobbelstenen</td>
-                            <td class="score" data-score="vier-dezelfde">-</td>
-                        </tr>
-                        <tr>
-                            <td>Full House</td>
-                            <td>25 punten</td>
-                            <td class="score" data-score="full-house">-</td>
-                        </tr>
-                        <tr>
-                            <td>Kleine straat</td>
-                            <td>30 punten</td>
-                            <td class="score" data-score="kleine-straat">-</td>
-                        </tr>
-                        <tr>
-                            <td>Grote straat</td>
-                            <td>40 punten</td>
-                            <td class="score" data-score="grote-straat">-</td>
-                        </tr>
-                        <tr>
-                            <td>Yahtzee</td>
-                            <td>50 punten</td>
-                            <td class="score" data-score="yahtzee">-</td>
-                        </tr>
-                        <tr>
-                            <td>Kans</td>
-                            <td>Som van alle dobbelstenen</td>
-                            <td class="score" data-score="kans">-</td>
-                        </tr>
-                        <tr class="summary-row">
-                            <td>Totaal onder</td>
-                            <td></td>
-                            <td class="score" data-score="totaal-onder">-</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th scope="row">Eindtotaal</th>
-                            <td></td>
-                            <td class="score" data-score="eindtotaal">-</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
-        </main>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Yahtzee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Yahtzee</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>dice-1</th>
+                <th>dice-2</th>
+                <th>dice-3</th>
+                <th>dice-4</th>
+                <th>dice-5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="dice-1"></td>
+                <td id="dice-2"></td>
+                <td id="dice-3"></td>
+                <td id="dice-4"></td>
+                <td id="dice-5"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Worpsoort</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Enen</td>
+                <td id="Enen"></td>
+            </tr>
+            <tr>
+                <td>Tweeen</td>
+                <td id="Tweeen"></td>
+            </tr>
+            <tr>
+                <td>Drieën</td>
+                <td id="Drieën"></td>
+            </tr>
+            <tr>
+                <td>Vieren</td>
+                <td id="Vieren"></td>
+            </tr>
+            <tr>
+                <td>Vijven</td>
+                <td id="Vijven"></td>
+            </tr>
+            <tr>
+                <td>Zessen</td>
+                <td id="Zessen"></td>
+            </tr>
+            <tr>
+                <td>Three of a Kind</td>
+                <td id="ThreeOfAKind"></td>
+            </tr>
+            <tr>
+                <td>Four of a Kind</td>
+                <td id="FourOfAKind"></td>
+            </tr>
+            <tr>
+                <td>Full House</td>
+                <td id="FullHouse"></td>
+            </tr>
+            <tr>
+                <td>Small Straight</td>
+                <td id="SmallStraight"></td>
+            </tr>
+            <tr>
+                <td>Large Straight</td>
+                <td id="LargeStraight"></td>
+            </tr>
+            <tr>
+                <td>Yahtzee</td>
+                <td id="Yahtzee"></td>
+            </tr>
+            <tr>
+                <td>Chance</td>
+                <td id="Chance"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="gooi-button">Gooien!</button>
+    <!-- TODO: Maak hier het scoreblok in een HTML tabel -->
+    <!-- Tip: Je hebt 2 delen nodig: bovenkant (enen t/m zessen) en onderkant (three of a kind, etc.) -->
+
+    <!-- TODO: Link je JavaScript bestand hier, net voor het sluiten van de body -->
+    <script src="script.js"></script>
+</body>
+
 </html>

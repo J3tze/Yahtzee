@@ -1,92 +1,17 @@
+/* TODO: Voeg hier je CSS styling toe */
+/* Tip: Begin simpel! Je kunt later altijd mooiere styling toevoegen */
+
+/* Voorbeeld om je op weg te helpen:
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 2rem;
-    background: #f2f2f2;
-    color: #222;
+    font-family: Arial, sans-serif;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#dobbelstenen {
-    flex: 1 1 250px;
-}
-
-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    background: #0069c2;
-    color: #fff;
-    cursor: pointer;
-}
-
-#dobbelstenen-tabel {
-    margin-top: 1rem;
-    border-collapse: separate;
-    border-spacing: 0.5rem;
-}
-
-.die {
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    border: 2px solid #0069c2;
-    border-radius: 6px;
-    font-size: 1.5rem;
-    background: #fff;
-}
-
-#scoreblok {
-    flex: 2 1 400px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-}
-
-#scoreblok table {
-    width: 100%;
+table {
     border-collapse: collapse;
 }
 
-#scoreblok th,
-#scoreblok td {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    text-align: left;
+td {
+    border: 1px solid black;
+    padding: 10px;
 }
-
-#scoreblok thead {
-    background: #0069c2;
-    color: #fff;
-}
-
-.section-row th {
-    background: #eef5ff;
-}
-
-.summary-row td,
-tfoot th,
-tfoot td {
-    font-weight: bold;
-    background: #f6f8fb;
-}
-
-.score {
-    text-align: center;
-    width: 4rem;
-}
-
-@media (max-width: 700px) {
-    main {
-        flex-direction: column;
-    }
-}
+*/
